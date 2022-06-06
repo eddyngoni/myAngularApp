@@ -1,0 +1,20 @@
+@import "../../assets/style.scss"; //import style using the standard import
+p {
+  color: red;
+}
+
+:host {
+  display: block;
+  padding: 2px;
+  border: 2px solid red;
+}
+
+:host(.active) {
+  padding: 2px;
+  border: 2px solid green;
+}
+
+//style applied only on condition the container class being set
+:host-context(.theme-light) p {
+  background-color: bisque;
+}

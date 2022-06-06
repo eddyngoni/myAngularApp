@@ -1,0 +1,24 @@
+<div style="text-align: center">
+  <label>Parent Component</label>
+</div>
+<!-- Pass Message to Child Component -->
+<!-- Pass message to parent output function with event binding -->
+
+<!-- Display the message with variable declared in component.ts -->
+<p>{{ receivedMessage }}</p>
+
+<p>{{ receivedHookMsg }}</p>
+
+<!-- ngContent -owerful tool for reuse
+ Uses the concept of projection to take the element of another html component and display it within itself.
+ used mostly whenever u like to inject HTML content into a component
+ -->
+<ng-content></ng-content>
+
+<button (click)="toggleText()">Toggle Text</button>
+<div>----- {{ showText }} ----</div>
+
+<app-child
+  (messageEvent)="receiveMessage($event)"
+  [childMessage]="'Hello from Parent'"
+></app-child>

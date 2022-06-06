@@ -1,0 +1,8 @@
+{
+  "terminal.integrated.automationProfile.osx": {
+    "terminal.integrated.defaultProfile.osx": "git-bash",
+    "terminal.integrated.automationShell.osx": "/usr/local/bin",
+    "args": ["-l"],
+    "path": "/usr/local/bin"
+  }
+}

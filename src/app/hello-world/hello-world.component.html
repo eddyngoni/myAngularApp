@@ -1,0 +1,25 @@
+<div style="text-align: center">
+  <label>Hello World Component</label>
+</div>
+
+<!-- Applying styles via the link and style tag-->
+<link rel="stylesheet" src="../../styles.scss" />
+<style>
+  p {
+    font-style: italic;
+  }
+</style>
+<p>{{ title }} works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <ng-content [question]></ng-content>
+      <ng-content [answer]></ng-content> <br />
+    </div>
+    <div class="col-6">
+      <!-- Template Variables you can access template variables anywhere within the template-->
+      <input #phone placeholder="phone" /> <br />
+      <button (click)="callPhone(phone.value)">Call</button>
+    </div>
+  </div>
+</div>
